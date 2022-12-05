@@ -34,6 +34,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
 import org.bouncycastle.crypto.digests.RIPEMD160Digest;
+import org.bouncycastle.crypto.generators.SCrypt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -572,5 +573,13 @@ public class Utils {
         for (byte[] push : stack)
             parts.add('[' + HEX.encode(push) + ']');
         return SPACE_JOINER.join(parts);
+    }
+
+    public static byte[] scryptDigest(byte[] input) {
+        try {
+            return SCrypt.generate(input, input, 1024, 1, 1, 32);
+        } catch (Exception e) {
+            return null;
+        }
     }
 }
