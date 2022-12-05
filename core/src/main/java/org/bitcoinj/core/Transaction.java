@@ -108,13 +108,13 @@ public class Transaction extends ChildMessage {
     /**
      * If feePerKb is lower than this, Bitcoin Core will treat it as if there were no fee.
      */
-    public static final Coin REFERENCE_DEFAULT_MIN_TX_FEE = Coin.valueOf(1000); // 0.01 mBTC
+    public static final Coin REFERENCE_DEFAULT_MIN_TX_FEE = Coin.COIN; // Infinitecoin: 1 IFC
 
     /**
      * If using this feePerKb, transactions will get confirmed within the next couple of blocks.
      * This should be adjusted from time to time. Last adjustment: February 2017.
      */
-    public static final Coin DEFAULT_TX_FEE = Coin.valueOf(100000); // 1 mBTC
+    public static final Coin DEFAULT_TX_FEE = Coin.COIN; // Infinitecoin: 1 IFC
 
     /**
      * Any standard (ie P2PKH) output smaller than this value (in satoshis) will most likely be rejected by the network.
