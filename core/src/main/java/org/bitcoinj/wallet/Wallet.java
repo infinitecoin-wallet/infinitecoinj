@@ -4143,7 +4143,7 @@ public class Wallet extends BaseTaggableObject
                 int opReturnCount = 0;
                 for (TransactionOutput output : req.tx.getOutputs()) {
                     if (output.isDust())
-                        throw new DustySendRequested();
+                        //throw new DustySendRequested();
                     if (ScriptPattern.isOpReturn(output.getScriptPubKey()))
                         ++opReturnCount;
                 }
@@ -5116,7 +5116,16 @@ public class Wallet extends BaseTaggableObject
             if (needAtLeastReferenceFee && feePerKb.compareTo(Transaction.REFERENCE_DEFAULT_MIN_TX_FEE) < 0) {
                 feePerKb = Transaction.REFERENCE_DEFAULT_MIN_TX_FEE;
             }
-            Coin feeNeeded = feePerKb.multiply(size).divide(1000);
+            
+			// IFC: fees can be so simple...
+            Coin feeNeeded = Coin.COIN.multiply((int)Math.ceil(size/1000f));
+
+            // IFC: Add any remaining dust fees
+            for (TransactionOutput output : tx.getOutputs()) {
+                if (output.getValue().isLessThan(Coin.COIN)) {
+                    feeNeeded = feeNeeded.add(Coin.COIN);
+                }
+            }
 
             if (!fee.isLessThan(feeNeeded)) {
                 // Done, enough fee included.
