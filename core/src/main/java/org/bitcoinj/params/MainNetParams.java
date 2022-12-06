@@ -71,6 +71,24 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         checkpoints.put(99979, Sha256Hash.wrap("f376177d849c75c6344fc93c9429f59df7d5b25b067447e694e087bb765128e0"));
         checkpoints.put(139999, Sha256Hash.wrap("ff9d5edf1661d8cd6fc53ffb9f583b16981874522044a760d8c8c004c312a41e"));
         checkpoints.put(199999, Sha256Hash.wrap("ec62c7700fd83c56f2013b1b97a7dbcc2aad1f065176ea18d9c47701ced164d5"));
+		checkpoints.put(228800, Sha256Hash.wrap("6a2a329c5d21d6433cf9bda5ba43d66a732898bcd0c81150f1584d095edd5cd5"));
+        checkpoints.put(242388, Sha256Hash.wrap("4c2dfd22435525519e89041420f6692e709da34f48243cebe1be14d43adb1c5c"));
+        checkpoints.put(265420, Sha256Hash.wrap("9ef4ce8e7dab5c2f2b9142ceb285419ef0ea62021e5f613d4a81a3fc9d53453e"));
+        checkpoints.put(265497, Sha256Hash.wrap("206aed8fb5b1ed94cf696bc5b964445380dd4c30c186e45ba5ed545866a242c7"));
+        checkpoints.put(268559, Sha256Hash.wrap("fd0ff0e0020f0ade68122c0fd82f648c7e6913e32cd6a3d8abc81694055daecc"));
+		checkpoints.put(268560, Sha256Hash.wrap("08c5337322ea40d3602b98ab9d9b1d43abd87dda19a4f8e282414a838ae3dbb8"));
+        checkpoints.put(282045, Sha256Hash.wrap("271abe1c26daf5a684034529befb217e16f87e1af779c0e63bdd971def3d8ba5"));
+        checkpoints.put(380962, Sha256Hash.wrap("a032a87b430091fbb4faa20f16c8247f93cfcc1854bd49a19c3c9fc3a0c43634"));
+        checkpoints.put(453211, Sha256Hash.wrap("ea08eace1b78c5513d74750c7cfc01d0c1f3789fc650ccce197b85497405ce56"));
+        checkpoints.put(647000, Sha256Hash.wrap("667fc19d6066d472176136f2a34dac9b2662e9d7212df3679e56042d8b198906"));
+		checkpoints.put(4333333, Sha256Hash.wrap("8e4fcf3e003293882dec8943e42ed29e066cfc3782ff4d011c58c8b8ed9bb9a4"));
+        checkpoints.put(4368037, Sha256Hash.wrap("b60d656dcc3fdd60b279a7de7ad8c21950c4cbae58698219785249e0174d4bcd"));
+        checkpoints.put(5781980, Sha256Hash.wrap("a91e780de0b3f91f1b0515e56296b54804730cdfd21a45b4d2c433a3f92aebb7"));
+        checkpoints.put(6043693, Sha256Hash.wrap("5518c133fead075e372027e69c2b245a01d5a6e95ef3c97d576bf42a62d1e6ef"));
+        checkpoints.put(6887217, Sha256Hash.wrap("58edc430d6ecc35ae3fa4d8ccdfb8a42752ff771d2a08c8e6dc1f1b3b6782d4d"));
+		checkpoints.put(7081698, Sha256Hash.wrap("4342f79249ffe1c4afe08fca143ee9945579528a9047afc0e79ef276ea6fde6b"));
+        checkpoints.put(7900916, Sha256Hash.wrap("185d45e33bb5c8546b0923bd9c31c64c1b11eba2ae51afe549ce3e5aba63f70e"));
+        checkpoints.put(8578526, Sha256Hash.wrap("a5d4766c2e9ba13efd942f2bfcb1849ce824b54130c9de3c15e80afec0f81aa5"));
 
         dnsSeeds = new String[] {
                 "dnsseed.infinitecoin.com",
