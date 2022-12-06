@@ -28,9 +28,9 @@ import static com.google.common.base.Preconditions.*;
  * Parameters for the main production network on which people trade goods and services.
  */
 public class MainNetParams extends AbstractBitcoinNetParams {
-    public static final int MAINNET_MAJORITY_WINDOW = 1000;
-    public static final int MAINNET_MAJORITY_REJECT_BLOCK_OUTDATED = 950;
-    public static final int MAINNET_MAJORITY_ENFORCE_BLOCK_UPGRADE = 750;
+    public static final int MAINNET_MAJORITY_WINDOW = 40320;  // 40320 = 2880 * 14day
+    public static final int MAINNET_MAJORITY_REJECT_BLOCK_OUTDATED = 38304;  // 95% of 40320
+    public static final int MAINNET_MAJORITY_ENFORCE_BLOCK_UPGRADE = 30240;  // 75% of 40320
 
     public MainNetParams() {
         super();
