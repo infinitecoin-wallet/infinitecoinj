@@ -151,7 +151,7 @@ public abstract class NetworkParameters {
     /**
      * The maximum number of coins to be generated
      */
-    public static final long MAX_COINS = 21000000;
+    public static final long MAX_COINS = 2147483647; // Why this number? https://en.wikipedia.org/wiki/2,147,483,647  The MAX_COINS here is not a hard indicator of the blockchain
 
     /**
      * The maximum money to be generated
